@@ -147,23 +147,40 @@ Entendo que a busca por apoio psicológico pode ser um passo significativo. Por 
   <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" target="_blank" class="float-btn" aria-label="WhatsApp">📞</a>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('show');
-    }
-    const depo = document.querySelectorAll('#depoimentos .testimonial');
-    let i = 0;
-    setInterval(() => {
-      depo[i].classList.remove('active');
-      i = (i + 1) % depo.length;
-      depo[i].classList.add('active');
-    }, 4000);
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('show');
+  }
 
-    document.querySelectorAll('.faq-question').forEach(q =>
-      q.addEventListener('click', () => {
-        const ans = q.nextElementSibling;
-        ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
-      })
-    );
-  </script>
+  // Fecha o menu ao clicar em qualquer link
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const menu = document.getElementById('navLinks');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (menu.classList.contains('show')) {
+          menu.classList.remove('show');
+        }
+      });
+    });
+  });
+
+  // Depoimentos automáticos
+  const depo = document.querySelectorAll('#depoimentos .testimonial');
+  let i = 0;
+  setInterval(() => {
+    depo[i].classList.remove('active');
+    i = (i + 1) % depo.length;
+    depo[i].classList.add('active');
+  }, 4000);
+
+  // FAQ - Mostrar/esconder respostas
+  document.querySelectorAll('.faq-question').forEach(q =>
+    q.addEventListener('click', () => {
+      const ans = q.nextElementSibling;
+      ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+    })
+  );
+</script>
+
 </body>
 </html>
