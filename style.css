@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -23,10 +22,6 @@ img {
   display: block;
 }
 
-ul {
-  list-style: none;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -37,52 +32,12 @@ header {
 }
 
 nav {
-  width: 100%;
-  padding: 15px 5vw;
+  max-width: 1100px;  /* limite maior no desktop */
+  margin: 0 auto;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.nav-brand {
-  font-family: 'Playfair Display', serif;
-  white-space: nowrap;
-  line-height: 1.2;
-}
-
-.nav-brand .nome {
-  font-family: 'Tangerine', cursive;
-  font-size: 2.5rem;
-  color: #d4af37;
-}
-
-.nav-brand .crp {
-  font-size: 0.9rem;
-  color: #fff;
-  font-style: italic;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  color: #d4af37;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: opacity 0.3s;
-  white-space: nowrap;
-}
-
-.nav-links a:hover {
-  opacity: 0.7;
 }
 
 main {
@@ -90,8 +45,9 @@ main {
 }
 
 section {
-  width: 100%;
-  padding: 80px 5vw;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 h1, h2, h3 {
@@ -102,49 +58,42 @@ h1, h2, h3 {
 }
 
 p {
-  color: #eee;
   margin-bottom: 20px;
+  text-align: center;
 }
 
+/* HERO */
 #inicio {
-  position: relative;
-  height: 100vh;
+  min-height: calc(100vh - 80px);
   background-image: url('https://ingriddinizpsico.github.io/site-principal-psi/sofa.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(75, 15, 40, 0.7);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
 
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(75, 15, 40, 0.7);
+}
+
 .inicio-texto {
-  width: 100%;
-  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
   text-align: center;
-  padding: 0 5vw;
 }
 
 .inicio-texto h1 {
-  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  color: #d4af37;
-  margin-bottom: 15px;
 }
 
 .inicio-texto p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
   color: #eee;
 }
 
@@ -155,7 +104,6 @@ p {
   color: #4b0f28;
   border-radius: 30px;
   font-weight: 600;
-  text-decoration: none;
   transition: background 0.3s;
 }
 
@@ -163,156 +111,10 @@ p {
   background: #b5912e;
 }
 
-.atuacao-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.atuacao-items span {
-  padding: 10px 20px;
-  border: 2px solid #d4af37;
-  border-radius: 25px;
-  color: #d4af37;
-  font-weight: 600;
-  transition: background 0.3s, color 0.3s;
-}
-
-.atuacao-items span:hover {
-  background: #d4af37;
-  color: #4b0f28;
-}
-
-.psicologa-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.psicologa-content img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #d4af37;
-  flex-shrink: 0;
-}
-
-.psicologa-content p {
-  flex: 1;
-}
-
-#depoimentos .testimonial {
-  display: none;
-  padding: 20px;
-  border-radius: 8px;
-  background: rgba(255,255,255,.05);
-}
-
-#depoimentos .testimonial.active {
-  display: block;
-}
-
-#depoimentos .autor {
-  margin-top: 10px;
-  color: #d4af37;
-  font-weight: 600;
-  text-align: right;
-}
-
-.faq-item {
-  margin-bottom: 15px;
-}
-
-.faq-question {
-  cursor: pointer;
-  color: #d4af37;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.faq-answer {
-  display: none;
-  padding-left: 10px;
-  border-left: 2px solid #d4af37;
-  color: #eee;
-}
-
-#contato p {
-  margin-bottom: 10px;
-}
-
-#contato a {
-  color: #d4af37;
-  font-weight: 600;
-}
-
-.float-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: #d4af37;
-  color: #4b0f28;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-  transition: background 0.3s;
-  z-index: 1001;
-}
-
-.float-btn:hover {
-  background: #b5912e;
-}
-
-.cta-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #d4af37;
-  color: #4b0f28;
-  text-align: center;
-  padding: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.cta-footer:hover {
-  background: #b5912e;
-}
-
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: #3a0f20;
+  nav {
     flex-direction: column;
-    display: none;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 15px;
-    text-align: center;
   }
 
   .inicio-texto h1 {
@@ -321,6 +123,30 @@ p {
 
   .inicio-texto p {
     font-size: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio-texto h1 {
+    font-size: 1.6rem;
+  }
+
+  .inicio-texto p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
