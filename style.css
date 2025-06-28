@@ -61,4 +61,22 @@
       .nav-links.show { display:flex; }
       .nav-links a { padding:15px; text-align:center; }
     }
+.inicio-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sofa-img {
+  max-width: 300px;
+  height: auto;
+}
+
+.inicio-texto {
+  max-width: 500px;
+}
+
+
   </style>
