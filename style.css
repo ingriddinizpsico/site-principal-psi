@@ -61,36 +61,50 @@
       .nav-links.show { display:flex; }
       .nav-links a { padding:15px; text-align:center; }
     }
+#inicio {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
 .inicio-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinha no início, lado a lado */
   gap: 30px;
-  flex-wrap: wrap; /* Para quebrar no mobile */
+  flex-wrap: wrap;
+  max-width: 900px;
 }
 
 .sofa-img {
-  max-width: 400px; /* Ajuste como quiser: 400, 500, 600px */
+  max-width: 400px;
   width: 100%;
   height: auto;
   flex-shrink: 0;
 }
 
 .inicio-texto {
-  max-width: 500px;
-  text-align: left; /* Garante que o texto fique alinhado à esquerda */
+  max-width: 450px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
+  #inicio {
+    padding: 60px 20px;
+  }
+
   .inicio-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .inicio-texto {
     text-align: center;
   }
 }
+
 
 
 
