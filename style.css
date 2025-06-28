@@ -66,24 +66,21 @@
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* Alinha o sofá à esquerda */
 }
 
 .sofa-img {
-  max-width: 500px;
+  max-width: 600px; /* Deixa maior */
+  width: 100%;
   height: auto;
 }
-
-.inicio-texto {
-  max-width: 500px;
-}
 #inicio {
-  padding-top: 40px; /* diminui o espaço em cima */
+  padding-top: 20px; /* Diminui o espaço em cima */
+  padding-bottom: 40px; /* Se quiser mais respiro embaixo */
+  text-align: left; /* Alinha o texto */
 }
 
-.sofa-img {
-  max-width: 600px; /* aumenta o tamanho da foto */
-}
+
 
 
   </style>
