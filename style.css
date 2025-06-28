@@ -77,6 +77,13 @@
 .inicio-texto {
   max-width: 500px;
 }
+#inicio {
+  padding-top: 40px; /* diminui o espaço em cima */
+}
+
+.sofa-img {
+  max-width: 600px; /* aumenta o tamanho da foto */
+}
 
 
   </style>
