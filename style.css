@@ -104,6 +104,19 @@
     text-align: center;
   }
 }
+/* Garanta que isso venha depois de qualquer .sofa { margin:0 auto; } */
+body.home .sofa {
+  display: block;
+  max-width: 400px;             /* ajuste à largura do sofá */
+  margin: 40px 0 40px 20px;      /* top, right, bottom, left */
+  text-align: left;
+}
+
+body.home .sofa img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 
