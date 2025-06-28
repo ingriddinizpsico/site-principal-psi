@@ -6,7 +6,7 @@
     ul { list-style:none; }
 
     header { position:fixed; top:0; width:100%; background:#3a0d20; box-shadow:0 2px 5px rgba(0,0,0,0.4); z-index:1000; }
-    nav { max-width:900px; margin:0 auto; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; }
+    nav { max-width:1005; margin:0 auto; padding:15px 0px; display:flex; align-items:center; justify-content:space-between; }
     .nav-brand { font-family:'Playfair Display',serif; white-space:nowrap; line-height:1.2; }
     .nav-brand .nome { font-family:'Tangerine', cursive; font-size:2.5rem; color:#d4af37; }
     .nav-brand .crp { font-size:0.9rem; color:#fff; font-style:italic; }
@@ -16,7 +16,10 @@
     .nav-links a:hover { opacity:.7; }
 
     main { margin-top:80px; }
-    section { padding:80px 20px; max-width:900px; margin:0 auto; }
+    section {
+  padding: 80px 40px; /* mais respiro nas laterais */
+  max-width: 100%;
+  margin: 80px o o o;
     h1,h2,h3 { font-family:'Playfair Display',serif; color:#d4af37; margin-bottom:20px; text-align:center; }
     p { color:#eee; margin-bottom:20px; }
 
