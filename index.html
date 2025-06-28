@@ -1,120 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ingrid Diniz Psicóloga</title>
-  <style>
-    body {
-      background-color: #7a0f24; /* mantendo seu fundo principal */
-      background-image: url('assets/img/sofa.png');
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: auto 150px; /* ajusta o tamanho do sofa.png */
-      color: white;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<body style="background-image: url('assets/img/sofa.png'); background-repeat: no-repeat; background-position: left top; background-size: auto 150px;">
 
-    .container {
-      padding: 20px;
-    }
-
-    .psicologa-section {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .psicologa-section img {
-      height: 100px;
-      border-radius: 8px; /* ou 50% se quiser redonda */
-    }
-
-    .mensagem {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 10px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-
-    .botao-whatsapp {
-      background-color: green;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-    }
-
-    .botao-whatsapp:hover {
-      background-color: darkgreen;
-    }
-<style>
-  .psicologa-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .psicologa-section img {
-    height: 80px;
-    border-radius: 8px;
-  }
-
-  body {
-    background-image: url('assets/img/sofa.png');
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: auto 150px;
-  }
-</style>
-
-<div class="psicologa-section">
-  <img src="assets/img/psicolog.png" alt="Foto da Psicóloga Ingrid Diniz">
-  <div>
-    <h1>Ingrid Diniz</h1>
-    <p>PSICÓLOGA CLÍNICA</p>
-    <p>CRP:06/204167</p>
-  </div>
-</div>
-
-
-  </style>
-</head>
-<body>
-
-  <nav>
-    <!-- Seu menu -->
-  </nav>
-
-  <div class="container">
-
-    <div class="psicologa-section">
-      <img src="assets/img/psicolog.png" alt="Foto da Psicóloga Ingrid Diniz">
-      <div>
-        <h1>Ingrid Diniz</h1>
-        <p>PSICÓLOGA CLÍNICA</p>
-        <p>CRP:06/204167</p>
+  <header>
+    <nav aria-label="Menu principal">
+      <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+        <img src="assets/img/psicolog.png" alt="Foto da Psicóloga Ingrid Diniz" style="height: 50px; border-radius: 50%; border: 2px solid #d4af37;">
+        <div>
+          <div class="nome">Ingrid Diniz</div>
+          <div class="crp">Psicóloga Clínica · CRP 06/204187</div>
+        </div>
       </div>
-    </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#atuacao">Áreas de Atuação</a>
+        <a href="#psicologa">A Psicóloga</a>
+        <a href="#entrevista">Entrevista preliminar</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#perguntas">Perguntas Frequentes</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
 
-    <h2>Transformando desafios em crescimento.</h2>
-    <p>Um passo de cada vez. Conecte-se comigo hoje e comece sua jornada de autodescoberta.</p>
-
-    <div class="mensagem">
-      Como psicóloga, estou aqui para apoiá-la em cada passo do caminho. Ofereço atendimento online, permitindo que você busque apoio no conforto e privacidade da sua própria casa.
-    </div>
-
-    <a class="botao-whatsapp" href="https://wa.me/SEUNUMEROAQUI" target="_blank">Agende sua sessão</a>
-
-    <div class="mensagem">
-      Se você chegou até aqui, você já deu o primeiro passo. Entre em contato comigo e agende sua sessão.
-    </div>
-
-  </div>
-
-</body>
-</html>
+  <main>
+    <!-- O resto do seu conteúdo permanece igual -->
