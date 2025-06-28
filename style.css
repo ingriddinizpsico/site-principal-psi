@@ -65,19 +65,26 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* Alinha o sofá à esquerda */
+  flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+  justify-content: center;
 }
 
 .sofa-img {
-  max-width: 600px; /* Deixa maior */
+  max-width: 400px; /* Ou maior se preferir: 500px ou 600px */
   width: 100%;
   height: auto;
+  flex-shrink: 0; /* Impede a imagem de encolher muito */
 }
-#inicio {
-  padding-top: 20px; /* Diminui o espaço em cima */
-  padding-bottom: 40px; /* Se quiser mais respiro embaixo */
-  text-align: left; /* Alinha o texto */
+
+.inicio-texto {
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .inicio-content {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
