@@ -62,85 +62,95 @@
       .nav-links a { padding:15px; text-align:center; }
     }
 #inicio {
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 100px 20px 60px;
   background-color: #4b0f28;
 }
 
 .inicio-content {
   display: flex;
-  gap: 40px;
+  justify-content: center;
   align-items: center;
-  max-width: 1100px;
+  gap: 40px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sofa-coluna {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sofa-img {
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
   height: auto;
-/* Remova essas duas linhas abaixo */
-  /* border-radius: 10px; */
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.4); */
 }
 
 .inicio-texto {
   flex: 1;
-  color: #fff;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  text-align: center;
+  max-width: 600px;
 }
 
 .inicio-texto h1 {
-  font-size: 2.5rem;
-  color: #d4af37;
+  font-size: 2.4rem;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .inicio-texto h2 {
   font-size: 1.3rem;
-  font-weight: 300;
   color: #eee;
+  margin-bottom: 20px;
 }
 
 .inicio-texto p {
   color: #eee;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .inicio-texto .btn {
-  align-self: flex-start;
-  margin: 10px 0;
+  display: inline-block;
+  padding: 12px 30px;
+  background: #d4af37;
+  color: #4b0f28;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.inicio-texto .btn:hover {
+  background: #b5912e;
 }
 
 .final-step {
+  color: #ddd;
   font-size: 0.9rem;
-  color: #ccc;
+  margin-top: 20px;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
   .inicio-content {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
-  .inicio-texto {
-    align-items: center;
+  .sofa-img {
+    max-width: 80%;
   }
 
-  .inicio-texto .btn {
-    align-self: center;
+  .inicio-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  .inicio-texto h2 {
+    font-size: 1.1rem;
   }
 }
-
-
 
 
 
