@@ -6,7 +6,13 @@
     ul { list-style:none; }
 
     header { position:fixed; top:0; width:100%; background:#3a0d20; box-shadow:0 2px 5px rgba(0,0,0,0.4); z-index:1000; }
-    nav { max-width:1005; margin:0 auto; padding:15px 0px; display:flex; align-items:center; justify-content:space-between; }
+    nav {
+  width: 100%;
+  padding: 15px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
     .nav-brand { font-family:'Playfair Display',serif; white-space:nowrap; line-height:1.2; }
     .nav-brand .nome { font-family:'Tangerine', cursive; font-size:2.5rem; color:#d4af37; }
     .nav-brand .crp { font-size:0.9rem; color:#fff; font-style:italic; }
@@ -17,9 +23,9 @@
 
     main { margin-top:80px; }
     section {
-  padding: 80px 40px; /* mais respiro nas laterais */
-  max-width: 100%;
-  margin: 80px o o o;
+  padding: 80px 5vw;
+  width: 100%;
+}
     h1,h2,h3 { font-family:'Playfair Display',serif; color:#d4af37; margin-bottom:20px; text-align:center; }
     p { color:#eee; margin-bottom:20px; }
 
@@ -33,7 +39,12 @@
     .atuacao-items { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-bottom:20px; }
     .atuacao-items span { padding:10px 20px; border:2px solid #d4af37; border-radius:25px; color:#d4af37; font-weight:600; transition:background .3s,color .3s; }
     .atuacao-items span:hover { background:#d4af37; color:#4b0f28; }
-    #atuacao p { max-width:700px; margin:0 auto 20px; text-align:center; color:#ddd; }
+    #atuacao p {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ddd;
+}
+
 
     .psicologa-content { display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:20px; }
     .psicologa-content img { width:200px; height:200px; object-fit:cover; border-radius:50%; border:3px solid #d4af37; flex-shrink:0; }
