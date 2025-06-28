@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Psicóloga Ingrid Diniz</title>
   <meta name="description" content="Atendimento online de psicologia para mulheres. Agende sua sessão e cresça com acolhimento e ética."/>
+  <!-- Open Graph -->
   <meta property="og:title" content="Psicóloga Ingrid Diniz"/>
   <meta property="og:description" content="Atendimento online de psicologia para mulheres. Agende sua sessão e cresça com acolhimento e ética."/>
-  <meta property="og:image" content="https://ingriddinizpsico.github.io/site-principal-psi/sofa.png"/>
-  <meta property="og:url" content="https://ingriddinizpsico.github.io/site-principal-psi/"/>
+  <meta property="og:image" content="https://seusite.com/preview.jpg"/>
+  <meta property="og:url" content="https://seusite.com"/>
   <meta name="theme-color" content="#4b0f28"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Tangerine&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
@@ -33,18 +34,12 @@
     h1,h2,h3 { font-family:'Playfair Display',serif; color:#d4af37; margin-bottom:20px; text-align:center; }
     p { color:#eee; margin-bottom:20px; }
 
-    #inicio {
-      background: url('sofa.png') no-repeat center top;
-      background-size: contain;
-      padding-top: 300px;
-      padding-bottom: 100px;
-      text-align:center;
-    }
+    #inicio { min-height:calc(100vh - 80px); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
     #inicio h1 { font-size:2.4rem; }
-    #inicio h2 { font-size:1.4rem; font-weight:300; max-width:600px; color:#eee; margin:10px auto 20px; }
+    #inicio h2 { font-size:1.4rem; font-weight:300; max-width:600px; color:#eee; margin:10px 0 20px; }
     .btn { display:inline-block; margin:15px 0; padding:12px 30px; background:#d4af37; color:#4b0f28; font-weight:600; border-radius:30px; transition:background .3s; }
     .btn:hover { background:#b5912e; }
-    .final-step { color:#ccc; font-size:0.9rem; max-width:600px; margin:0 auto; }
+    .final-step { color:#ccc; font-size:0.9rem; max-width:600px; }
 
     .atuacao-items { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-bottom:20px; }
     .atuacao-items span { padding:10px 20px; border:2px solid #d4af37; border-radius:25px; color:#d4af37; font-weight:600; transition:background .3s,color .3s; }
@@ -89,12 +84,13 @@
         <div class="nome">Ingrid Diniz</div>
         <div class="crp">Psicóloga Clínica · CRP 06/204187</div>
       </div>
+        <a 
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <div class="nav-links" id="navLinks">
         <a href="#inicio">Início</a>
         <a href="#atuacao">Áreas de Atuação</a>
         <a href="#psicologa">A Psicóloga</a>
-        <a href="#entrevista">Entrevista preliminar gratuita</a>
+        <a href="#entrevista">Entrevista preliminar</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#perguntas">Perguntas Frequentes</a>
         <a href="#contato">Contato</a>
@@ -105,15 +101,102 @@
   <main>
     <section id="inicio">
       <h1>Transformando desafios em crescimento.</h1>
-      <h2>Um passo de cada vez. Conecte-se comigo hoje e comece sua jornada de autodescoberta.</h2>
+      <h2>Um passo de cada vez. Convido você a iniciar uma jornada de autoconhecimento e cuidado pessoal.</h2>
       <p>Como psicóloga, estou aqui para apoiá-la em cada passo do caminho. Ofereço atendimento online, permitindo que você busque apoio no conforto e privacidade da sua própria casa.</p>
       <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn" target="_blank" rel="noopener">Agende sua sessão</a>
       <p class="final-step">Se você chegou até aqui, você já deu o primeiro passo. Entre em contato comigo e agende sua sessão.</p>
     </section>
 
-    <!-- As demais seções continuam iguais -->
-    <!-- ... -->
+    <section id="atuacao">
+      <h2>Áreas de Atuação</h2>
+      <div class="atuacao-items">
+        <span>Medo</span><span>Estresse</span><span>Burnout</span>
+        <span>Luto</span><span>Autoestima</span><span>Insegurança</span>
+        <span>Timidez</span><span>Relacionamentos</span><span>Entre outros...</span>
+      </div>
+      <p>Se você se identifica com algum desses tópicos, não hesite em entrar em contato comigo. A psicoterapia é um espaço seguro para explorar seus sentimentos. Estou aqui para ajudar.</p>
+      <h3>Por que fazer psicoterapia?</h3>
+      <p>A psicoterapia é um processo de autoconhecimento e transformação, permite que você explore seus sentimentos, pensamentos e comportamentos de uma maneira segura e sigilosa, ajudando a entender melhor a si mesmo e a lidar com questões pessoais. Ela te ajuda a identificar padrões de pensamento e comportamento que podem estar associadas com situações que geram sofrimento psíquico. </p>
+    </section>
 
+    <section id="psicologa">
+      <h2>A Psicóloga</h2>
+      <div class="psicologa-content">
+        <img src="https://via.placeholder.com/200x200.png?text=Sua+Foto" alt="Foto da Psicóloga Ingrid Diniz" loading="lazy"/>
+        <p>Olá, muito prazer! Sou Ingrid Diniz, psicóloga clínica com abordagem psicanalítica. Meu trabalho é voltado ao acolhimento de mulheres e pessoas da comunidade LGBTQIA+ que desejam olhar para suas emoções com mais delicadeza e profundidade.</p>
+        <p>A psicoterapia que ofereço é um convite para que você se reconecte com sua história, no seu tempo, com liberdade para sentir, questionar e transformar. Acredito na escuta sensível, no respeito à singularidade e na construção de um espaço seguro, onde seja possível existir com autenticidade e liberdade.</p>
+      </div>
+    </section>
+
+    <section id="entrevista">
+      <h2>Entrevista preliminar gratuita</h2>
+ <p>Agende sua entrevista 
+Entendo que a busca por apoio psicológico pode ser um passo significativo. Por isso, ofereço uma entrevista preliminar gratuita. Este é um momento crucial para que eu, como psicóloga, possa entender suas necessidades e demandas. </p>
+      <p>Também discutiremos aspectos como valores, dias e horários de atendimento. Este é um espaço aberto para perguntas e para que você possa expressar quaisquer preocupações que possa ter.</p>
+    </section>
+
+    <section id="depoimentos">
+      <h2>Depoimentos</h2>
+      <div class="testimonial active">
+        <p>"Terapia com a Ingrid é aquele momento da semana que eu sei que vou rir, chorar e sair mais leve. Às vezes tudo isso na mesma hora rsksr.”</p>
+        <div class="autor">— M. S.</div>
+      </div>
+      <div class="testimonial">
+        <p>"A Ingrid me ajudou a entender que o 'não' existe e tudo bem usá-lo. Agora é quase minha palavra preferida kkk.."</p>
+        <div class="autor">— J. P.</div>
+      </div>
+      <div class="testimonial">
+        <p>"Encontrei um espaço seguro para falar sobre tudo sem julgamentos. </p>
+        <div class="autor">— A. L.</div>
+      </div>
+      <div class="testimonial">
+        <p>"Depois das sessões com a psi Ingrid, minha frase preferida virou: 'Isso não é problema meu.' kk obrigada por tudo!"</p>
+        <div class="autor">— R. S.</div>
+      </div>
+      </div>
+      <div class="testimonial">
+        <p>"A Ingrid me ajudou a atravessar um momento difícil, com muita paciência e sensibilidade. Agradeço imensamente.”</p>
+        <div class="autor">— P. A.</div>
+      </div>
+      <div class="testimonial">
+        <p>”Recomendo de olhos fechados: sensibilidade e profissionalismo. A Ingrid me ajudou a sair de uma situação em que eu não via saída… eu achava que merecia tudo o que estava acontecendo."“</p>
+        <div class="autor">— T. M.</div>
+      </div>
+    </section>
+
+    <section id="perguntas">
+      <h2>Perguntas Frequentes</h2>
+      <div class="faq-item">
+        <div class="faq-question">Quanto custa uma sessão de terapia online?</div>
+        <div class="faq-answer">De acordo com as diretrizes do CRP, não divulgamos os valores das sessões no site. No entanto, ao entrar em contato comigo, podemos discutir os valores individualmente.</div>
+      </div>
+   
+      <div class="faq-item">
+        <div class="faq-question">Qual plataforma é usada?</div>
+        <div class="faq-answer">Utilizamos Google Meet, plataforma segura e fácil de usar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Aceita convênios?</div>
+        <div class="faq-answer">Não, atualmente só aceitamos pagamentos particulares. Isso me permite fornecer um atendimento personalizado e de alta qualidade para todos os meus clientes.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Formas de pagamento?</div>
+        <div class="faq-answer">Trabalho na modalidade PIX.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">O que é preciso para começar?</div>
+        <div class="faq-answer">Conexão estável à Internet e dispositivo (PC/tablet/smartphone) em ambiente privado.</div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>WhatsApp: <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" target="_blank">11 95480-9903</a></p>
+      <p>Redes sociais:
+        <a href="https://www.instagram.com/ingriddiniz.psico" target="_blank">Instagram</a> •
+    
+      </p>
+    </section>
   </main>
 
   <div class="cta-footer" onclick="window.open('https://wa.me/message/ZFQ3PUFNDBL7M1','_blank')">
