@@ -62,38 +62,68 @@
       .nav-links a { padding:15px; text-align:center; }
     }
 #inicio {
-  min-height: calc(100vh - 80px);
+  padding: 100px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  background-color: #4b0f28;
 }
 
 .inicio-content {
   display: flex;
+  gap: 40px;
   align-items: center;
-  gap: 30px;
+  max-width: 1100px;
   flex-wrap: wrap;
-  max-width: 900px;
 }
 
 .sofa-img {
-  max-width: 400px;
-  width: 100%;
+  width: 500px;
+  max-width: 100%;
   height: auto;
-  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .inicio-texto {
-  max-width: 450px;
+  flex: 1;
+  color: #fff;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
-@media (max-width: 768px) {
-  #inicio {
-    padding: 60px 20px;
-  }
+.inicio-texto h1 {
+  font-size: 2.5rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
 
+.inicio-texto h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #eee;
+}
+
+.inicio-texto p {
+  color: #eee;
+  margin-bottom: 10px;
+}
+
+.inicio-texto .btn {
+  align-self: flex-start;
+  margin: 10px 0;
+}
+
+.final-step {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
   .inicio-content {
     flex-direction: column;
     align-items: center;
@@ -101,23 +131,13 @@
   }
 
   .inicio-texto {
-    text-align: center;
+    align-items: center;
+  }
+
+  .inicio-texto .btn {
+    align-self: center;
   }
 }
-/* Garanta que isso venha depois de qualquer .sofa { margin:0 auto; } */
-body.home .sofa {
-  display: block;
-  max-width: 400px;             /* ajuste à largura do sofá */
-  margin: 40px 0 40px 20px;      /* top, right, bottom, left */
-  text-align: left;
-}
-
-body.home .sofa img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 
 
