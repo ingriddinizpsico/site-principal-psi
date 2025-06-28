@@ -158,15 +158,16 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(75, 15, 40, 0.7);
+  background: rgba(75, 15, 40, 0.7); /* vinho escuro translúcido */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px;
 }
 
 .inicio-texto {
-  max-width: 600px;
+  max-width: 900px;
+  width: 100%;
   text-align: center;
 }
 
@@ -177,10 +178,23 @@ body {
   margin-bottom: 15px;
 }
 
+.inicio-texto h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #eee;
+  margin-bottom: 20px;
+}
+
 .inicio-texto p {
   font-size: 1.1rem;
-  margin-bottom: 20px;
   color: #eee;
+  margin-bottom: 20px;
+}
+
+.final-step {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 20px;
 }
 
 .btn {
@@ -198,16 +212,24 @@ body {
   background: #b5912e;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
+  .inicio-texto {
+    padding: 0 20px;
+  }
+
   .inicio-texto h1 {
     font-size: 2rem;
+  }
+
+  .inicio-texto h2 {
+    font-size: 1.1rem;
   }
 
   .inicio-texto p {
     font-size: 1rem;
   }
 }
-
 
 
   </style>
