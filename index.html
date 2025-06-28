@@ -5,86 +5,259 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Psicóloga Ingrid Diniz</title>
   <meta name="description" content="Atendimento online de psicologia para mulheres. Agende sua sessão e cresça com acolhimento e ética."/>
-  <meta property="og:title" content="Psicóloga Ingrid Diniz"/>
-  <meta property="og:description" content="Atendimento online de psicologia para mulheres. Agende sua sessão e cresça com acolhimento e ética."/>
-  <meta property="og:image" content="https://ingriddinizpsico.github.io/site-principal-psi/sofa.png"/>
-  <meta property="og:url" content="https://ingriddinizpsico.github.io/site-principal-psi/"/>
   <meta name="theme-color" content="#4b0f28"/>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Tangerine&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-    body { font-family:'Open Sans',sans-serif; background:#4b0f28; color:#fff; line-height:1.6; }
-    a { color:inherit; text-decoration:none; }
-    img { max-width:100%; display:block; }
-    ul { list-style:none; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-    header { position:fixed; top:0; width:100%; background:#3a0d20; box-shadow:0 2px 5px rgba(0,0,0,0.4); z-index:1000; }
-    nav { max-width:900px; margin:0 auto; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; }
-    .nav-brand { font-family:'Playfair Display',serif; white-space:nowrap; line-height:1.2; }
-    .nav-brand .nome { font-family:'Tangerine', cursive; font-size:2.5rem; color:#d4af37; }
-    .nav-brand .crp { font-size:0.9rem; color:#fff; font-style:italic; }
-    .menu-toggle { display:none; font-size:1.5rem; color:#d4af37; cursor:pointer; }
-    .nav-links { display:flex; gap:20px; }
-    .nav-links a { font-weight:600; font-size:0.95rem; transition:opacity .3s; white-space:nowrap; }
-    .nav-links a:hover { opacity:.7; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #4b0f28;
+      color: #fff;
+      line-height: 1.6;
+    }
 
-    main { margin-top:80px; }
-    section { padding:80px 20px; max-width:900px; margin:0 auto; }
-    h1,h2,h3 { font-family:'Playfair Display',serif; color:#d4af37; margin-bottom:20px; text-align:center; }
-    p { color:#eee; margin-bottom:20px; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #3a0d20;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .nav-brand .nome {
+      font-family: 'Tangerine', cursive;
+      font-size: 2.5rem;
+      color: #d4af37;
+    }
+
+    .nav-brand .crp {
+      font-size: 0.9rem;
+      color: #fff;
+      font-style: italic;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: #d4af37;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      opacity: .7;
+    }
+
+    main {
+      margin-top: 80px;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #eee;
+      margin-bottom: 20px;
+    }
 
     #inicio {
-      background: url('sofa.png') no-repeat center top;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url("sofa.png");
       background-size: contain;
-      padding-top: 300px;
-      padding-bottom: 100px;
-      text-align:center;
+      background-repeat: no-repeat;
+      background-position: center;
     }
-    #inicio h1 { font-size:2.4rem; }
-    #inicio h2 { font-size:1.4rem; font-weight:300; max-width:600px; color:#eee; margin:10px auto 20px; }
-    .btn { display:inline-block; margin:15px 0; padding:12px 30px; background:#d4af37; color:#4b0f28; font-weight:600; border-radius:30px; transition:background .3s; }
-    .btn:hover { background:#b5912e; }
-    .final-step { color:#ccc; font-size:0.9rem; max-width:600px; margin:0 auto; }
 
-    .atuacao-items { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-bottom:20px; }
-    .atuacao-items span { padding:10px 20px; border:2px solid #d4af37; border-radius:25px; color:#d4af37; font-weight:600; transition:background .3s,color .3s; }
-    .atuacao-items span:hover { background:#d4af37; color:#4b0f28; }
-    #atuacao p { max-width:700px; margin:0 auto 20px; text-align:center; color:#ddd; }
+    #inicio h1 {
+      font-size: 2.4rem;
+      background: rgba(75, 15, 40, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+    }
 
-    .psicologa-content { display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:20px; }
-    .psicologa-content img { width:200px; height:200px; object-fit:cover; border-radius:50%; border:3px solid #d4af37; flex-shrink:0; }
-    .psicologa-content p { flex:1; }
+    #inicio h2, #inicio p {
+      background: rgba(75, 15, 40, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
 
-    #entrevista p { color:#eee; }
+    .btn {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 30px;
+      background: #d4af37;
+      color: #4b0f28;
+      font-weight: 600;
+      border-radius: 30px;
+    }
 
-    #depoimentos .testimonial { display:none; padding:20px; border-radius:8px; background:rgba(255,255,255,.05); }
-    #depoimentos .testimonial.active { display:block; }
-    #depoimentos .autor { margin-top:10px; color:#d4af37; font-weight:600; text-align:right; }
+    .btn:hover {
+      background: #b5912e;
+    }
 
-    .faq-item { margin-bottom:15px; }
-    .faq-question { cursor:pointer; color:#d4af37; font-weight:600; margin-bottom:5px; }
-    .faq-answer { display:none; padding-left:10px; border-left:2px solid #d4af37; color:#eee; }
+    .atuacao-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-    #contato p { margin-bottom:10px; }
-    #contato a { color:#d4af37; font-weight:600; }
+    .atuacao-items span {
+      padding: 10px 20px;
+      border: 2px solid #d4af37;
+      border-radius: 25px;
+      color: #d4af37;
+      font-weight: 600;
+    }
 
-    .float-btn { position:fixed; bottom:20px; right:20px; width:50px; height:50px; background:#d4af37; color:#4b0f28; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; box-shadow:0 2px 5px rgba(0,0,0,0.4); transition:background .3s; z-index:1001; }
-    .float-btn:hover { background:#b5912e; }
+    .psicologa-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
 
-    .cta-footer { position:fixed; bottom:0; left:0; width:100%; background:#d4af37; color:#4b0f28; text-align:center; padding:12px; font-weight:700; cursor:pointer; transition:background .3s; }
-    .cta-footer:hover { background:#b5912e; }
+    .psicologa-content img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #d4af37;
+    }
 
-    @media(max-width:768px){
-      .menu-toggle { display:block; }
-      .nav-links { position:absolute; top:60px; left:0; width:100%; background:#3a0f20; flex-direction:column; display:none; }
-      .nav-links.show { display:flex; }
-      .nav-links a { padding:15px; text-align:center; }
+    .testimonial {
+      display: none;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .testimonial.active {
+      display: block;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-left: 10px;
+      border-left: 2px solid #d4af37;
+      padding-left: 10px;
+    }
+
+    .float-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #d4af37;
+      color: #4b0f28;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+    }
+
+    .cta-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #d4af37;
+      color: #4b0f28;
+      text-align: center;
+      padding: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    @media(max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        flex-direction: column;
+        background: #3a0d20;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 15px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <nav aria-label="Menu principal">
+    <nav>
       <div class="nav-brand">
         <div class="nome">Ingrid Diniz</div>
         <div class="crp">Psicóloga Clínica · CRP 06/204187</div>
@@ -94,9 +267,9 @@
         <a href="#inicio">Início</a>
         <a href="#atuacao">Áreas de Atuação</a>
         <a href="#psicologa">A Psicóloga</a>
-        <a href="#entrevista">Entrevista preliminar gratuita</a>
+        <a href="#entrevista">Entrevista</a>
         <a href="#depoimentos">Depoimentos</a>
-        <a href="#perguntas">Perguntas Frequentes</a>
+        <a href="#perguntas">FAQ</a>
         <a href="#contato">Contato</a>
       </div>
     </nav>
@@ -105,41 +278,37 @@
   <main>
     <section id="inicio">
       <h1>Transformando desafios em crescimento.</h1>
-      <h2>Um passo de cada vez. Conecte-se comigo hoje e comece sua jornada de autodescoberta.</h2>
-      <p>Como psicóloga, estou aqui para apoiá-la em cada passo do caminho. Ofereço atendimento online, permitindo que você busque apoio no conforto e privacidade da sua própria casa.</p>
-      <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn" target="_blank" rel="noopener">Agende sua sessão</a>
-      <p class="final-step">Se você chegou até aqui, você já deu o primeiro passo. Entre em contato comigo e agende sua sessão.</p>
+      <h2>Conecte-se comigo hoje e comece sua jornada de autodescoberta.</h2>
+      <p>Atendimento online com ética e acolhimento. Vamos conversar?</p>
+      <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn">Agende sua sessão</a>
     </section>
 
-    <!-- As demais seções continuam iguais -->
-    <!-- ... -->
+    <!-- Continue suas outras seções aqui como estavam no código anterior -->
 
   </main>
 
-  <div class="cta-footer" onclick="window.open('https://wa.me/message/ZFQ3PUFNDBL7M1','_blank')">
-    Agende sua sessão pelo WhatsApp
-  </div>
-
-  <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" target="_blank" class="float-btn" aria-label="WhatsApp">📞</a>
+  <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="float-btn">📞</a>
+  <div class="cta-footer" onclick="window.open('https://wa.me/message/ZFQ3PUFNDBL7M1')">Agende sua sessão pelo WhatsApp</div>
 
   <script>
     function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('show');
+      document.getElementById("navLinks").classList.toggle("show");
     }
-    const depo = document.querySelectorAll('#depoimentos .testimonial');
-    let i = 0;
+
+    const depoimentos = document.querySelectorAll(".testimonial");
+    let index = 0;
     setInterval(() => {
-      depo[i].classList.remove('active');
-      i = (i + 1) % depo.length;
-      depo[i].classList.add('active');
+      depoimentos[index].classList.remove("active");
+      index = (index + 1) % depoimentos.length;
+      depoimentos[index].classList.add("active");
     }, 4000);
 
-    document.querySelectorAll('.faq-question').forEach(q =>
-      q.addEventListener('click', () => {
-        const ans = q.nextElementSibling;
-        ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
-      })
-    );
+    document.querySelectorAll(".faq-question").forEach(item => {
+      item.addEventListener("click", () => {
+        const answer = item.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
   </script>
 </body>
 </html>
