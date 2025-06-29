@@ -127,8 +127,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    text-align: center;
+     padding: 40px 20px;
+  text-align: center;
+
   }
 
   .inicio-texto {
@@ -160,6 +161,7 @@
     font-weight: 600;
     text-decoration: none;
     transition: background 0.3s;
+
   }
 
   .btn:hover {
@@ -171,6 +173,108 @@
     font-size: 0.9rem;
     max-width: 600px;
     margin: 0 auto;
+  }
+
+  #atuacao {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+  }
+
+  .atuacao-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .atuacao-items span {
+    padding: 10px 20px;
+    border: 2px solid #d4af37;
+    border-radius: 25px;
+    color: #d4af37;
+    font-weight: 600;
+    transition: background .3s, color .3s;
+  }
+
+  .atuacao-items span:hover {
+    background: #d4af37;
+    color: #4b0f28;
+  }
+
+  #atuacao p {
+    max-width: 100%;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #ddd;
+  }
+
+  .psicologa-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .psicologa-content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    flex-shrink: 0;
+  }
+
+  .psicologa-content p {
+    flex: 1;
+  }
+
+  #depoimentos .testimonial {
+    display: none;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255,255,255,.05);
+  }
+
+  #depoimentos .testimonial.active {
+    display: block;
+  }
+
+  #depoimentos .autor {
+    margin-top: 10px;
+    color: #d4af37;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .faq-item {
+    margin-bottom: 15px;
+  }
+
+  .faq-question {
+    cursor: pointer;
+    color: #d4af37;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .faq-answer {
+    display: none;
+    padding-left: 10px;
+    border-left: 2px solid #d4af37;
+    color: #eee;
+  }
+
+  #contato p {
+    margin-bottom: 10px;
+  }
+
+  #contato a {
+    color: #d4af37;
+    font-weight: 600;
   }
 
   .float-btn {
@@ -245,4 +349,5 @@
       font-size: 1rem;
     }
   }
+
 </style>
