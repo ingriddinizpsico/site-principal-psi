@@ -101,15 +101,16 @@
       background: #b5912e;
     }
 
+    /* ===== INÍCIO — NOVO HERO ===== */
     #inicio {
-      height: 100vh;
-      background-image: url('https://ingriddinizpsico.github.io/site-principal-psi/sofa.png');
-      background-size: cover;
-      background-position: center;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      background:
+        radial-gradient(1200px 600px at 20% 20%, rgba(212,175,55,0.12), transparent 60%),
+        linear-gradient(180deg, rgba(75,15,40,1) 0%, rgba(75,15,40,1) 100%);
     }
 
     .overlay {
@@ -123,9 +124,20 @@
       text-align: center;
     }
 
+    .hero {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     .inicio-texto {
       max-width: 800px;
       animation: fadeIn 2s ease-in-out;
+      text-align: left;
     }
     .inicio-texto h1 {
       font-family: 'Playfair Display', serif;
@@ -144,10 +156,24 @@
       margin-bottom: 30px;
     }
 
+    .hero-media {
+      display: flex;
+      justify-content: center;
+    }
+    .hero-media img {
+      max-width: 520px;
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      filter: drop-shadow(0 12px 36px rgba(0,0,0,0.45));
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    /* ===== FIM HERO ===== */
 
     /* Depoimentos - só um aparece de cada vez com fade */
     .testimonial {
@@ -339,7 +365,7 @@
       }
     }
 
-    /* Mostrar botão menu no mobile */
+    /* Mostrar botão menu no mobile + hero responsivo */
     @media (max-width: 767px) {
       nav:not(.mobile-nav) {
         display: none;
@@ -347,6 +373,8 @@
       .menu-toggle {
         display: flex;
       }
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-media { order: -1; margin-bottom: 20px; }
     }
   </style>
 </head>
@@ -387,18 +415,24 @@
   </header>
 
   <main>
+    <!-- INÍCIO (trocado) -->
     <section id="inicio">
       <div class="overlay">
-        <div class="inicio-texto">
-          <h1>Transformando desafios em crescimento</h1>
-          <h2>Um passo de cada vez. Conecte-se comigo hoje e comece sua jornada de autodescoberta.</h2>
-          <p>Como psicóloga, estou aqui para apoiá-la em cada passo do caminho. Ofereço atendimento online, permitindo que você busque apoio no conforto e privacidade da sua própria casa.</p>
-          <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn" target="_blank">Agende sua sessão</a>
-<p style="margin-top: 20px;">Se você chegou até aqui, você já deu o primeiro passo. Entre em contato comigo e agende sua sessão.</p>
-
+        <div class="hero">
+          <div class="inicio-texto">
+            <h1>Transformando desafios em crescimento</h1>
+            <h2>Um passo de cada vez. Conecte-se comigo hoje e comece sua jornada de autodescoberta.</h2>
+            <p>Como psicóloga, estou aqui para apoiá-la em cada passo do caminho. Ofereço atendimento online, permitindo que você busque apoio no conforto e privacidade da sua própria casa.</p>
+            <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn" target="_blank">Agende sua sessão</a>
+            <p style="margin-top: 20px;">Se você chegou até aqui, você já deu o primeiro passo. Entre em contato comigo e agende sua sessão.</p>
+          </div>
+          <div class="hero-media">
+            <img src="hero-ingrid.png" alt="Retrato de Ingrid Diniz com elementos decorativos ao fundo">
+          </div>
         </div>
       </div>
     </section>
+    <!-- Fim do INÍCIO -->
 
     <section id="atuacao">
       <h2>Áreas de Atuação</h2>
@@ -435,8 +469,8 @@
       <div class="testimonial">"A Ingrid me ajudou a entender que o 'não' existe e tudo bem usá-lo. Agora é quase minha palavra preferida kkk.." — J. P.</div>
       <div class="testimonial">"Encontrei um espaço seguro para falar sobre tudo sem julgamentos." — A. L.</div>
       <div class="testimonial">"Depois das sessões com a psi Ingrid, minha frase preferida virou: 'Isso não é problema meu.' kk obrigada por tudo!" — R. S.</div><div class="testimonial">"Profissional excelente, íntegra e ética. Sabe entender o paciente com respeito e empatia e deixar o ambiente leve e aconchegante. O preço é bem acessível. Única psicóloga que consegui manter o tratamento. Índico de olhos fechados." - K. M.</div>
-<div class="testimonial">"Profissional excelente, íntegra e ética. Sabe entender o paciente com respeito e empatia e deixar o ambiente leve e aconchegante. O preço é bem acessível. Única psicóloga que consegui manter o tratamento. Índico de olhos fechados." - K. M.</div>
-    <div class="testimonial">"É uma excelente psicóloga, tenho transtorno de ansiedade generalizada e sofria muito, às vezes não conseguia nem dormir a noite e meu coração vivia acelerado, depois que comecei a terapia com ela não tive mais crises. Ela me ajudou muito a lidar com minhas questões, sou infinitamente grata!" - L. C.</div>
+      <div class="testimonial">"Profissional excelente, íntegra e ética. Sabe entender o paciente com respeito e empatia e deixar o ambiente leve e aconchegante. O preço é bem acessível. Única psicóloga que consegui manter o tratamento. Índico de olhos fechados." - K. M.</div>
+      <div class="testimonial">"É uma excelente psicóloga, tenho transtorno de ansiedade generalizada e sofria muito, às vezes não conseguia nem dormir a noite e meu coração vivia acelerado, depois que comecei a terapia com ela não tive mais crises. Ela me ajudou muito a lidar com minhas questões, sou infinitamente grata!" - L. C.</div>
     </section>
 
     <section id="perguntas">
@@ -546,3 +580,4 @@
   </script>
 </body>
 </html>
+
