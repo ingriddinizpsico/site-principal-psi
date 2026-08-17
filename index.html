@@ -177,26 +177,10 @@
   #entrevista p{max-width:640px; margin:0 auto 14px; color:#4a342c; line-height:1.75;}
   #entrevista .btn{margin-top:16px;}
 
-  /* ===== DEPOIMENTOS ===== */
+  /* ===== DEPOIMENTOS / AVALIAÇÕES GOOGLE ===== */
   #depoimentos{text-align:center;}
   #depoimentos h2{margin-bottom:44px;}
-  .testimonial-frame{
-    position:relative; min-height:140px; display:flex; align-items:center; justify-content:center;
-    max-width:680px; margin:0 auto;
-  }
-  .testimonial{
-    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-    opacity:0; transition:opacity .8s ease; padding:0 12px;
-  }
-  .testimonial.active{opacity:1; position:relative;}
-  .testimonial q{
-    font-family:'Fraunces',serif; font-style:italic; font-size:1.25rem; line-height:1.6; color:var(--creme);
-    display:block;
-  }
-  .testimonial .autor{display:block; margin-top:16px; font-family:'Inter',sans-serif; font-style:normal; font-size:.85rem; color:var(--dourado-soft); letter-spacing:.05em;}
-  .dots{display:flex; gap:8px; justify-content:center; margin-top:30px;}
-  .dots span{width:6px; height:6px; border-radius:50%; background:rgba(201,162,77,.35);}
-  .dots span.active{background:var(--dourado);}
+  .reviews-widget{max-width:900px; margin:0 auto;}
 
   /* ===== FAQ ===== */
   #perguntas{text-align:left;}
@@ -384,20 +368,15 @@
     <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn" target="_blank">Marcar entrevista gratuita</a>
   </section>
 
-  <!-- DEPOIMENTOS -->
+  <!-- DEPOIMENTOS / AVALIAÇÕES GOOGLE -->
   <div class="section-dark">
     <div class="wrap-dark" id="depoimentos">
       <div class="eyebrow">Depoimentos</div>
       <h2 style="margin-bottom:44px;">Quem já caminhou comigo</h2>
-      <div class="testimonial-frame">
-        <div class="testimonial active"><q>Terapia com a Ingrid é aquele momento da semana que eu sei que vou rir, chorar e sair mais leve. Às vezes tudo isso na mesma hora.<span class="autor">M. S.</span></q></div>
-        <div class="testimonial"><q>A Ingrid me ajudou a entender que o "não" existe e tudo bem usá-lo. Agora é quase minha palavra preferida.<span class="autor">J. P.</span></q></div>
-        <div class="testimonial"><q>Encontrei um espaço seguro para falar sobre tudo sem julgamentos.<span class="autor">A. L.</span></q></div>
-        <div class="testimonial"><q>Depois das sessões, minha frase preferida virou: "Isso não é problema meu." Obrigada por tudo.<span class="autor">R. S.</span></q></div>
-        <div class="testimonial"><q>Profissional excelente, íntegra e ética. Sabe entender o paciente com respeito e empatia e deixar o ambiente leve e aconchegante. Indico de olhos fechados.<span class="autor">K. M.</span></q></div>
-        <div class="testimonial"><q>Tenho transtorno de ansiedade generalizada e sofria muito. Depois que comecei a terapia com ela não tive mais crises. Sou infinitamente grata.<span class="autor">L. C.</span></q></div>
+      <div class="reviews-widget">
+        <div id="JFWebsiteWidget-01a01189f5287000812359cee2483b931ee2"></div>
+        <script src="https://www.jotform.com/website-widgets/embed/01a01189f5287000812359cee2483b931ee2"></script>
       </div>
-      <div class="dots"></div>
     </div>
     <div class="wave" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,32 C 240,64 480,0 720,20 C 960,40 1200,10 1440,30 L1440,60 L0,60 Z" fill="#f7efe3"/></svg>
@@ -463,24 +442,6 @@
       if(!isOpen){ answer.style.display = 'block'; q.classList.add('open'); }
     });
   });
-
-  // Depoimentos rotativos + dots
-  const testimonials = document.querySelectorAll('.testimonial');
-  const dotsWrap = document.querySelector('.dots');
-  testimonials.forEach((_, i) => {
-    const d = document.createElement('span');
-    if(i === 0) d.classList.add('active');
-    dotsWrap.appendChild(d);
-  });
-  const dots = document.querySelectorAll('.dots span');
-  let tIndex = 0;
-  setInterval(() => {
-    testimonials[tIndex].classList.remove('active');
-    dots[tIndex].classList.remove('active');
-    tIndex = (tIndex + 1) % testimonials.length;
-    testimonials[tIndex].classList.add('active');
-    dots[tIndex].classList.add('active');
-  }, 5000);
 
   // Menu mobile
   const menuToggle = document.querySelector('.menu-toggle');
