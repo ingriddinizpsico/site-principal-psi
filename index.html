@@ -90,6 +90,9 @@
     transition:background .25s, transform .25s;
   }
   .btn:hover{background:var(--dourado-soft); transform:translateY(-1px);}
+  .btn-whatsapp{background:#25d366; color:#fff; animation:whatsappBlink 1.6s ease-in-out infinite;}
+  .btn-whatsapp:hover{background:#1fb958;}
+  @keyframes whatsappBlink{0%,100%{opacity:1;} 50%{opacity:.55;}}
   .btn-ghost{
     display:inline-block; padding:13px 30px; border:1px solid var(--dourado);
     color:var(--dourado); text-decoration:none; border-radius:2px; font-weight:600; font-size:.9rem;
@@ -102,16 +105,22 @@
 
   /* ===== HERO ===== */
   #inicio{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
     background:
       radial-gradient(900px 500px at 85% 10%, rgba(201,162,77,.10), transparent 60%),
       var(--vinho-950);
     color:var(--creme);
-    padding-top:150px;
-    padding-bottom:0;
+    padding:150px 0 90px;
+    overflow:hidden;
   }
+  #inicio .wave{position:absolute; left:0; bottom:0; margin:0;}
   .hero{
+    width:100%;
     display:grid; grid-template-columns:1.2fr .8fr; gap:48px; align-items:center;
-    max-width:1080px; margin:0 auto; padding:0 24px 90px;
+    max-width:1080px; margin:0 auto; padding:0 24px;
   }
   .hero-texto h1{
     font-size:clamp(2.2rem, 4vw, 3.4rem);
@@ -146,7 +155,7 @@
     color:var(--vinho-700); font-weight:500; font-size:.92rem;
     transition:background .25s, color .25s;
   }
-  .atuacao-items span:hover{background:var(--vinho-700); color:var(--creme);}
+  .atuacao-items span:hover, .atuacao-items span:active{background:var(--vinho-700); color:var(--creme);}
   .porque{border-top:1px solid #e2d2c1; padding-top:36px; display:grid; grid-template-columns:1fr 2fr; gap:24px;}
   .porque h3{font-size:1.3rem; color:var(--vinho-700);}
   .porque p{line-height:1.75; color:#4a342c;}
@@ -231,25 +240,32 @@
   .menu-toggle{display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:1600;}
   .menu-toggle span{width:26px; height:2px; background:var(--dourado-soft);}
   nav.mobile-nav{
-    display:none; flex-direction:column; background:var(--vinho-950);
-    position:fixed; top:0; right:0; width:78%; max-width:300px; height:100%;
-    padding:100px 30px 30px; box-shadow:-8px 0 24px rgba(0,0,0,.4); z-index:1500;
+    display:flex; flex-direction:column; background:rgba(42,10,24,.96);
+    backdrop-filter:blur(10px);
+    position:fixed; top:0; left:0; right:0; width:100%; max-width:none;
+    height:auto; max-height:0; overflow:hidden;
+    padding:0 28px; box-shadow:0 10px 24px rgba(0,0,0,.35); z-index:1500;
+    transition:max-height .35s ease, padding .35s ease;
+  }
+  nav.mobile-nav.open{
+    max-height:70vh;
+    padding:96px 28px 30px;
   }
   nav.mobile-nav a{margin:14px 0; font-size:1.1rem;}
 
   @media (min-width:769px){
     .menu-toggle{display:none !important;}
+    nav.mobile-nav{display:none !important;}
   }
   @media (max-width:768px){
     header{padding:14px 20px;}
     nav:not(.mobile-nav){display:none;}
     .menu-toggle{display:flex;}
-    nav.mobile-nav.open{display:flex;}
 
     main{margin-top:64px;}
     section, .wrap-dark{padding:64px 20px;}
-    #inicio{padding-top:110px;}
-    .hero{grid-template-columns:1fr; gap:32px; padding-bottom:64px; text-align:center;}
+    #inicio{padding:110px 0 70px; min-height:auto;}
+    .hero{grid-template-columns:1fr; gap:32px; padding-bottom:0; text-align:center;}
     .hero-texto p, .hero-texto .sub{margin-left:auto; margin-right:auto;}
     .hero-ctas{justify-content:center;}
     .blob-frame{margin:0 auto; max-width:240px;}
@@ -418,7 +434,7 @@
       <p>WhatsApp: <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" target="_blank">11 95480-9903</a></p>
       <p>Instagram: <a href="https://www.instagram.com/ingriddiniz.psico" target="_blank">@ingriddiniz.psico</a></p>
       <div class="contato-ctas">
-        <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn" target="_blank">Agendar pelo WhatsApp</a>
+        <a href="https://wa.me/message/ZFQ3PUFNDBL7M1" class="btn btn-whatsapp" target="_blank">Agendar pelo WhatsApp</a>
       </div>
     </div>
   </div>
