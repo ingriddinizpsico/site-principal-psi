@@ -182,13 +182,23 @@
   #atuacao{text-align:left;}
   #atuacao h2{font-size:2rem; margin-bottom:8px;}
   #atuacao .intro{max-width:640px; color:#5a4038; margin-bottom:36px; font-size:1.02rem; line-height:1.7;}
-  .atuacao-items{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:44px;}
-  .atuacao-items span{
+  .atuacao-items{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:28px;}
+  .atuacao-items button{
     padding:10px 20px; border:1px solid var(--vinho-700); border-radius:2px;
     color:var(--vinho-700); font-weight:500; font-size:.92rem;
+    background:transparent; font-family:'Inter',sans-serif; cursor:pointer;
     transition:background .25s, color .25s;
   }
-  .atuacao-items span:hover, .atuacao-items span:active{background:var(--vinho-700); color:var(--creme);}
+  .atuacao-items button:hover{background:rgba(74,18,41,.08);}
+  .atuacao-items button.active{background:var(--vinho-700); color:var(--creme);}
+  .atuacao-answer{
+    max-width:700px; margin:0 0 44px; padding:22px 24px;
+    background:var(--creme-2); border-left:3px solid var(--dourado);
+    min-height:28px;
+  }
+  .atuacao-answer p{line-height:1.75; color:#4a342c; font-size:1rem;}
+  .atuacao-answer .atuacao-answer-placeholder{color:#9a8574; font-style:italic;}
+  .atuacao-answer .topic-title{font-family:'Fraunces',serif; color:var(--vinho-700); font-size:1.15rem; margin-bottom:8px; display:block;}
   .porque{border-top:1px solid #e2d2c1; padding-top:36px; display:grid; grid-template-columns:1fr 2fr; gap:24px;}
   .porque h3{font-size:1.3rem; color:var(--vinho-700);}
   .porque p{line-height:1.75; color:#4a342c;}
@@ -362,9 +372,19 @@
     <h2>Com o que posso te ajudar</h2>
     <p class="intro">Se você se identifica com algum destes temas, não hesite em entrar em contato. A psicoterapia é um espaço seguro para explorar seus sentimentos, estou aqui para caminhar com você.</p>
     <div class="atuacao-items">
-      <span>Medo</span><span>Estresse</span><span>Burnout</span>
-      <span>Luto</span><span>Autoestima</span><span>Insegurança</span>
-      <span>Timidez</span><span>Relacionamentos</span><span>Entre outros</span>
+      <button type="button" data-topic="ansiedade">Ansiedade</button>
+      <button type="button" data-topic="medo">Medo</button>
+      <button type="button" data-topic="estresse">Estresse</button>
+      <button type="button" data-topic="burnout">Burnout</button>
+      <button type="button" data-topic="luto">Luto</button>
+      <button type="button" data-topic="autoestima">Autoestima</button>
+      <button type="button" data-topic="inseguranca">Insegurança</button>
+      <button type="button" data-topic="timidez">Timidez</button>
+      <button type="button" data-topic="relacionamentos">Relacionamentos</button>
+      <button type="button" data-topic="outros">Entre outros</button>
+    </div>
+    <div class="atuacao-answer" id="atuacao-answer">
+      <p class="atuacao-answer-placeholder">Toque em um tema acima para saber mais.</p>
     </div>
     <div class="porque">
       <h3>Por que fazer<br>psicoterapia?</h3>
@@ -465,6 +485,35 @@
 </a>
 
 <script>
+  // Áreas de atuação — painel de resposta
+  const topicTexts = {
+    ansiedade: 'A ansiedade pode aparecer por meio de preocupações constantes, pensamentos acelerados e sensações no corpo. Na terapia, você pode compreender o que está por trás desse sofrimento e como ele se relaciona com a sua história.',
+    medo: 'O medo faz parte da vida, mas pode se tornar limitante quando interfere em suas escolhas e experiências. Na terapia, podemos compreender o que esse sentimento representa para você e quais vivências podem estar relacionadas a ele.',
+    estresse: 'Quando as cobranças e responsabilidades se acumulam, até as pequenas tarefas podem parecer difíceis. A terapia ajuda a compreender essa sobrecarga, reconhecer seus limites e refletir sobre a forma como você lida com tantas exigências.',
+    burnout: 'O esgotamento profissional pode afetar o corpo, as emoções e a relação com o trabalho. Na terapia, é possível compreender como essa sobrecarga foi construída e refletir sobre cobranças, limites e expectativas presentes em sua vida.',
+    luto: 'Cada pessoa vive o luto de uma maneira única e não existe um tempo certo para superar uma perda. A terapia oferece um espaço acolhedor para expressar a dor, compreender os sentimentos e elaborar essa experiência no seu próprio tempo.',
+    autoestima: 'A forma como você se enxerga também é construída a partir das experiências e relações que viveu. Na terapia, podemos compreender como esse olhar foi formado e construir uma relação mais cuidadosa e gentil consigo mesma.',
+    inseguranca: 'A insegurança pode fazer você duvidar das próprias escolhas, capacidades e sentimentos. Na terapia, é possível compreender de onde vêm essas dúvidas e reconhecer com mais clareza seus desejos, necessidades e possibilidades.',
+    timidez: 'A timidez pode dificultar situações importantes, principalmente quando existe o medo de se expor ou ser julgada. Na terapia, você encontra um espaço seguro para compreender esse desconforto e se expressar com mais liberdade.',
+    relacionamentos: 'Cada pessoa constrói seus relacionamentos a partir da própria história e das experiências que viveu. A terapia ajuda a compreender seus vínculos, reconhecer padrões que se repetem e refletir sobre novas formas de se relacionar.',
+    outros: 'A psicoterapia também pode ajudar em muitas outras áreas da sua vida. Mesmo quando é difícil identificar ou explicar o que está causando sofrimento, a terapia oferece um espaço de escuta para compreender seus sentimentos, sua história e aquilo que você está vivendo.'
+  };
+  const topicButtons = document.querySelectorAll('.atuacao-items button');
+  const atuacaoAnswer = document.getElementById('atuacao-answer');
+  topicButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isActive = btn.classList.contains('active');
+      topicButtons.forEach(b => b.classList.remove('active'));
+      if (isActive) {
+        atuacaoAnswer.innerHTML = '<p class="atuacao-answer-placeholder">Toque em um tema acima para saber mais.</p>';
+        return;
+      }
+      btn.classList.add('active');
+      const key = btn.getAttribute('data-topic');
+      atuacaoAnswer.innerHTML = '<span class="topic-title">' + btn.textContent + '</span><p>' + topicTexts[key] + '</p>';
+    });
+  });
+
   // FAQ toggle
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
